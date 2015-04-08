@@ -6,12 +6,12 @@ import (
 )
 
 var (
-	statusEndpoint = "/status"
-	resp           interface{}
+	endpoint = "/status"
+	resp     interface{}
 )
 
 func init() {
-	http.Handle(statusEndpoint, http.HandlerFunc(Status))
+	http.Handle(endpoint, http.HandlerFunc(Status))
 }
 
 func Status(w http.ResponseWriter, req *http.Request) {
@@ -27,4 +27,9 @@ func Status(w http.ResponseWriter, req *http.Request) {
 
 func StatusResponse(v interface{}) {
 	resp = v
+}
+
+func StatusEndpoint(e string) {
+	endpoint = e
+	http.Handle(endpoint, http.HandlerFunc(Status))
 }
