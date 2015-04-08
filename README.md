@@ -13,5 +13,5 @@ go http.ListenAndServe("localhost:8080", nil)
 ```
 
 # Examples
-**[Example1](ext/examples/example1)** - Serve endpoint localhost:8000/status only returning status code
-**[Example2](ext/examples/example2)** - Serve endpoint localhost:8000/status with custom JSON payload
+1. **[Example1](ext/examples/example1)** - Serve endpoint localhost:8000/status only returning status code
+1. **[Example2](ext/examples/example2)** - Serve endpoint localhost:8000/status with custom JSON payload
