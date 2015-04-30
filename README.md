@@ -1,5 +1,5 @@
 # Steward
-Steward adds a status endpoint for service health checks.
+Steward adds a drop in status endpoint with minimal effort for service health checks.
 
 # Usage
 To use steward, link this package into your program:
