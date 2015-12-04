@@ -1,4 +1,6 @@
 # Steward
+[![Build Status](https://travis-ci.org/gomicro/steward.svg)](https://travis-ci.org/gomicro/steward)
+
 Steward adds a drop in status endpoint with minimal effort for service health checks.
 
 # Usage
