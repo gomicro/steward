@@ -1,0 +1,24 @@
+{
+	"ImportPath": "github.com/gomicro/steward",
+	"GoVersion": "go1.5.2",
+	"Deps": [
+		{
+			"ImportPath": "github.com/franela/goblin",
+			"Comment": "0.0.1-58-gac712d3",
+			"Rev": "ac712d36d1b123f786cbedcfa19b5d25697a14cc"
+		},
+		{
+			"ImportPath": "github.com/gorilla/context",
+			"Rev": "14f550f51af52180c2eefed15e5fd18d63c0a64a"
+		},
+		{
+			"ImportPath": "github.com/gorilla/mux",
+			"Rev": "ad4d7a5882b961e07e2626045eb995c022ac6664"
+		},
+		{
+			"ImportPath": "github.com/onsi/gomega",
+			"Comment": "v1.0-71-g2152b45",
+			"Rev": "2152b45fa28a361beba9aab0885972323a444e28"
+		}
+	]
+}
