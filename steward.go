@@ -11,10 +11,10 @@ var (
 )
 
 func init() {
-	http.Handle(endpoint, http.HandlerFunc(Status))
+	http.Handle(endpoint, http.HandlerFunc(HandleStatus))
 }
 
-func Status(w http.ResponseWriter, req *http.Request) {
+func HandleStatus(w http.ResponseWriter, req *http.Request) {
 	payload, err := json.MarshalIndent(resp, "", "    ")
 	if err != nil {
 		w.WriteHeader(http.StatusInternalServerError)
@@ -31,5 +31,5 @@ func StatusResponse(v interface{}) {
 
 func StatusEndpoint(e string) {
 	endpoint = e
-	http.Handle(endpoint, http.HandlerFunc(Status))
+	http.Handle(endpoint, http.HandlerFunc(HandleStatus))
 }

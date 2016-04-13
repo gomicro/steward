@@ -26,7 +26,7 @@ func TestStewardEndpoint(t *testing.T) {
 			wasHit = false
 			r.Path(endpoint).HandlerFunc(func(w http.ResponseWriter, req *http.Request) {
 				wasHit = true
-				Status(w, req)
+				HandleStatus(w, req)
 			})
 			server = httptest.NewServer(r)
 			client = http.Client{}
