@@ -1,5 +1,7 @@
 language: go
-
 go:
-  - 1.2
-  - tip
+- 1.2
+- tip
+notifications:
+  slack:
+    secure: hxwTTgGH72xCs2DorDns8Q9jAoG9KU4v76t/8gmebOPXeLEp7znRRWS4Ep04vwGzFmAlntZLbgQuAjkFqz4P/oOcuSd5Ts0V+Rjyi2Wv7OrnoPSXBf6TjEmVLbJ87B8PzKBNwRMCD6FP0TTLw4c0v0VeQfvDwrE+Aj9Z9xXlS/Y=
