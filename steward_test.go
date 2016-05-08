@@ -52,7 +52,7 @@ func TestStewardEndpoint(t *testing.T) {
 		})
 
 		g.It("should return a custom status response payload", func() {
-			StatusResponse(&Response{Application: "Foo", Version: "1.0.0", BuildTime: "now"})
+			SetStatusResponse(&Response{Application: "Foo", Version: "1.0.0", BuildTime: "now"})
 			req, err := http.NewRequest("GET", server.URL+endpoint, nil)
 			Expect(err).NotTo(HaveOccurred())
 

@@ -15,7 +15,7 @@ type Response struct {
 }
 
 func main() {
-	StatusResponse(&Response{Application: "Foo", Version: "1.0.0", BuildTime: "Today"})
+	SetStatusResponse(&Response{Application: "Foo", Version: "1.0.0", BuildTime: "Today"})
 	go startServiceLoop()
 	select {}
 }

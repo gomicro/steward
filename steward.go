@@ -25,11 +25,11 @@ func HandleStatus(w http.ResponseWriter, req *http.Request) {
 	w.Write(payload)
 }
 
-func StatusResponse(v interface{}) {
+func SetStatusResponse(v interface{}) {
 	resp = v
 }
 
-func StatusEndpoint(e string) {
+func SetStatusEndpoint(e string) {
 	endpoint = e
 	http.Handle(endpoint, http.HandlerFunc(HandleStatus))
 }
