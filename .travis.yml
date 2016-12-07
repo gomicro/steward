@@ -2,6 +2,8 @@ language: go
 go:
   - 1.2
   - tip
+before_script:
+   - curl -s -L -I https://gocover.io/_/github.com/gomicro/steward
 script:
   - go test -v $(go list ./... | grep -v /vendor/)
 notifications:
