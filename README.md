@@ -1,5 +1,6 @@
 # Steward
 [![Build Status](https://travis-ci.org/gomicro/steward.svg)](https://travis-ci.org/gomicro/steward)
+[![Coverage](http://gocover.io/_badge/github.com/gomicro/steward)](http://gocover.io/github.com/gomicro/steward)
 [![GoDoc](https://godoc.org/github.com/gomicro/steward?status.png)](https://godoc.org/github.com/gomicro/steward)
 
 Steward adds a drop in status endpoint with minimal effort for service health checks.
