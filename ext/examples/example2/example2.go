@@ -8,6 +8,7 @@ import (
 	"github.com/gorilla/mux"
 )
 
+// Response is the data for the status endpoint to display
 type Response struct {
 	Application string `json:"app"`
 	Version     string `json:"version"`
@@ -22,7 +23,7 @@ func main() {
 
 func registerEndpoints() http.Handler {
 	r := mux.NewRouter()
-	r.Path("/foo").HandlerFunc(FooHandler).Methods("GET")
+	r.Path("/foo").HandlerFunc(fooHandler).Methods("GET")
 	return r
 }
 
@@ -32,7 +33,7 @@ func startServiceLoop() {
 	http.ListenAndServe(net.JoinHostPort("0.0.0.0", "8000"), nil)
 }
 
-func FooHandler(w http.ResponseWriter, req *http.Request) {
+func fooHandler(w http.ResponseWriter, req *http.Request) {
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 	w.WriteHeader(http.StatusOK)
 	w.Write([]byte("Foobar"))

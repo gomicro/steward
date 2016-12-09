@@ -14,6 +14,8 @@ func init() {
 	http.Handle(endpoint, http.HandlerFunc(HandleStatus))
 }
 
+// HandleStatus implements the go http handler interface to
+// display specified status details
 func HandleStatus(w http.ResponseWriter, req *http.Request) {
 	payload, err := json.MarshalIndent(resp, "", "    ")
 	if err != nil {
@@ -25,10 +27,13 @@ func HandleStatus(w http.ResponseWriter, req *http.Request) {
 	w.Write(payload)
 }
 
+// SetStatusResponse overrides the default response payload
+// for the status endpoint
 func SetStatusResponse(v interface{}) {
 	resp = v
 }
 
+// SetStatusEndpoint overrides the default endpoint with desired value
 func SetStatusEndpoint(e string) {
 	endpoint = e
 	http.Handle(endpoint, http.HandlerFunc(HandleStatus))
