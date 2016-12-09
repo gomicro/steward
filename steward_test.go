@@ -68,6 +68,25 @@ func TestStewardEndpoint(t *testing.T) {
 			Expect(bodyBytes).To(ContainSubstring(`"version": "1.0.0",`))
 			Expect(bodyBytes).To(ContainSubstring(`"buildTime": "now"`))
 		})
+
+		g.It("should return an internal error for a bad payload", func() {
+			bad := func() {}
+			SetStatusResponse(bad)
+			req, err := http.NewRequest("GET", server.URL+endpoint, nil)
+			Expect(err).NotTo(HaveOccurred())
+
+			res, err := client.Do(req)
+			Expect(err).NotTo(HaveOccurred())
+			defer res.Body.Close()
+
+			Expect(res.StatusCode).To(Equal(http.StatusInternalServerError))
+		})
+
+		g.It("should set a custom status endpoint", func() {
+			e := "/foo/bar"
+			SetStatusEndpoint(e)
+			Expect(endpoint).To(Equal(e))
+		})
 	})
 }
 
