@@ -8,7 +8,7 @@
 Steward adds a drop in status endpoint with minimal effort for service health checks.
 
 # Requirements
-Golang v1.2 or higher
+Golang v1.6 or higher
 
 # Versioning
 The project will be versioned in accordance with [Semver 2.0.0](http://semver.org).  See the [releases](https://github.com/gomicro/vacay/releases) section for the latest version.  Until version 1.0.0 the SDK is considered to be unstable.
