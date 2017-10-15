@@ -1,3 +1,5 @@
+// Package steward provides a drop in way of adding a status endpoint to your
+// services
 package steward
 
 import (
