@@ -4,7 +4,7 @@ import (
 	"net"
 	"net/http"
 
-	. "github.com/gomicro/steward"
+	"github.com/gomicro/steward"
 )
 
 // StatusResponse is the data for the status endpoint to display
@@ -16,7 +16,7 @@ type StatusResponse struct {
 
 // ExampleCustomResponse demonstrates how to configure a custom response
 func Example_customResponse() {
-	SetStatusResponse(&StatusResponse{Application: "Foo", Version: "1.0.0", BuildTime: "Today"})
+	steward.SetStatusResponse(&StatusResponse{Application: "Foo", Version: "1.0.0", BuildTime: "Today"})
 
 	go http.ListenAndServe(net.JoinHostPort("0.0.0.0", "8000"), nil)
 	select {}
