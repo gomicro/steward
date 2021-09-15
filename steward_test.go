@@ -6,13 +6,13 @@ import (
 	"net/http/httptest"
 	"testing"
 
-	. "github.com/franela/goblin"
+	"github.com/franela/goblin"
 	"github.com/gorilla/mux"
 	. "github.com/onsi/gomega"
 )
 
 func TestStewardEndpoint(t *testing.T) {
-	g := Goblin(t)
+	g := goblin.Goblin(t)
 	RegisterFailHandler(func(m string, _ ...int) { g.Fail(m) })
 
 	g.Describe("Status Endpoint", func() {

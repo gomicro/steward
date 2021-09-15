@@ -18,6 +18,6 @@ type StatusResponse struct {
 func Example_customResponse() {
 	steward.SetStatusResponse(&StatusResponse{Application: "Foo", Version: "1.0.0", BuildTime: "Today"})
 
-	go http.ListenAndServe(net.JoinHostPort("0.0.0.0", "8000"), nil)
+	go http.ListenAndServe(net.JoinHostPort("0.0.0.0", "8000"), nil) //nolint:errcheck
 	select {}
 }

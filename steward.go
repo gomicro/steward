@@ -26,7 +26,7 @@ func HandleStatus(w http.ResponseWriter, req *http.Request) {
 	}
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 	w.WriteHeader(http.StatusOK)
-	w.Write(payload)
+	w.Write(payload) //nolint:errcheck
 }
 
 // SetStatusResponse overrides the default response payload
