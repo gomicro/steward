@@ -14,6 +14,6 @@ var (
 
 // ExampleDropin demonstrates how to start a service with steward automatically injecting a status endpoint
 func Example_dropin() {
-	go http.ListenAndServe(net.JoinHostPort(host, port), nil)
+	go http.ListenAndServe(net.JoinHostPort(host, port), nil) //nolint:errcheck
 	select {}
 }
